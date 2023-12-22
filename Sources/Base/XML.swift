@@ -196,11 +196,11 @@ private class XMLComposer: NSObject, XMLParserDelegate {
     fatalError()
   }
 
-  func parser(
-    _: XMLParser, foundCDATA _: Data
-  ) {
-    fatalError()
-  }
+//  func parser(
+//    _: XMLParser, foundCDATA _: Data
+//  ) {
+//    fatalError()
+//  }
 
   func parser(
     _: XMLParser, resolveExternalEntityName _: String, systemID _: String?

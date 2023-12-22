@@ -863,7 +863,7 @@ public enum SVGParser {
   private static let core = identifier(.id).map(SVG.CoreAttributes.init)
 
   public static func root(from data: Data) throws -> SVG.Document {
-    try root(from: XML.parse(from: data).get())
+    try root(from: XML.parse(from: data, ignoreWhitespaceOnlyLines: true).get())
   }
 
   public static func root(from xml: XML) throws -> SVG.Document {

@@ -130,7 +130,7 @@ public enum PathSegment {
   public static let empty: PathSegment = .composite([])
 }
 
-struct DrawRoutine {
+public struct DrawRoutine {
   var boundingRect: CGRect
   var gradients: [String: Gradient]
   var subroutines: [String: DrawRoutine]
@@ -154,8 +154,8 @@ struct PathRoutine {
   var content: [PathSegment]
 }
 
-struct Routines {
-  var drawRoutine: DrawRoutine
+public struct Routines {
+  public var drawRoutine: DrawRoutine
   var pathRoutines: [PathRoutine]
 
   init(drawRoutine: DrawRoutine, pathRoutines: [PathRoutine] = []) {

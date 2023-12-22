@@ -478,7 +478,7 @@ private class Context {
   var subroutesIds: [String: UInt32] = [:]
 }
 
-func generateRouteBytecode(route: DrawRoutine) -> [UInt8] {
+public func generateRouteBytecode(route: DrawRoutine) -> [UInt8] {
   var bytecode = Bytecode()
   generateRoute(route: route, context: Context(), bytecode: &bytecode)
   return bytecode

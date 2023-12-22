@@ -7,11 +7,14 @@ import PackageDescription
 let package = Package(
   name: "cggen",
   platforms: [
-    .macOS(.v10_15), .iOS(.v12),
+    .macOS(.v10_15), .iOS(.v13),
   ],
   products: [
-    .executable(name: "cggen", targets: ["cggen"]),
+//    .executable(name: "cggen", targets: ["cggen"]),
     .library(name: "cggen-bc-runner", targets: ["BCRunner"]),
+	.library(name: "libcggen", targets: ["libcggen"]),
+	.library(name: "BCRunner", targets: ["BCRunner"]),
+	.library(name: "Base", targets: ["Base"]),
   ],
   dependencies: [
     .package(
